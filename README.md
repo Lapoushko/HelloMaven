@@ -2,7 +2,9 @@
   
   
 ###Здесь выполнение первого задания: https://github.com/Sosmunk/git-naumen/branches
-
+git checkout main
+git merge task1-mesilov
+git push origin main
 
 ## Выполнение второго задания:
   
