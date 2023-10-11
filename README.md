@@ -7,9 +7,9 @@
 ## Ответ на доп. задание:
 **Доп. вопрос: какие операции нужно совершить, если не использовать Pull Request (полный
 набор команд от начала и до конца)?**
-git checkout main
-git merge task1-mesilov
-git push origin main
+<br/>git checkout main
+<br/>git merge task1-mesilov
+<br/>git push origin main
 
 ### Выполнение второго задания:
   1 - создали файлы ![2023-10-11_19-28-58](https://github.com/Lapoushko/HelloMaven/assets/45125347/64922e44-3ed2-4ec1-a840-ce00ca2fb43f)
