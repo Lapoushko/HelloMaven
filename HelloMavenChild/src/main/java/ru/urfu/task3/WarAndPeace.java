@@ -21,7 +21,6 @@ public class WarAndPeace {
 
     //Общая сложность алгоритма - O(N + k log k)
     public static void main(String[] args) {
-        // TODO
         List<List<Map.Entry<String,Integer>>> list = CalculateWords();
         double startTime = System.nanoTime();
         for (List<Map.Entry<String,Integer>> list1 : list) {
@@ -38,7 +37,7 @@ public class WarAndPeace {
     //Сложность O(N)
     private static List<List<Map.Entry<String,Integer>>> CalculateWords(){
         WordParser wordParser = new WordParser(WAR_AND_PEACE_FILE_PATH);
-        Map<String,Integer> hashMap = new HashMap<>();
+        Map<String,Integer> hashMap = new HashMap<>(); //С помощью Map можно быстро обращаться к словам O(1)
         wordParser.forEachWord(word ->{
             if (!hashMap.containsKey(word))
                 hashMap.put(word,1);
@@ -52,7 +51,7 @@ public class WarAndPeace {
 
     //Сложность O(k log k)
     private static List<Map.Entry<String,Integer>> CalculateTop10(Map<String,Integer> hashMap, boolean isMaxTop10){
-        List<Map.Entry<String,Integer>> list = new ArrayList<>(hashMap.entrySet());
+        List<Map.Entry<String,Integer>> list = new ArrayList<>(hashMap.entrySet()); //У ArrayList обращение к элементу требует O(1), поэтому подходит
         if(isMaxTop10){
             list.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
         }

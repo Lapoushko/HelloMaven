@@ -37,8 +37,7 @@ public class Task1 {
      * Возвращает дубликаты пользователей, которые есть в обеих коллекциях
      */
     public static List<User> findDuplicates(Collection<User> collA, Collection<User> collB) {
-        // TODO
-        HashSet<User> set = new HashSet<>(collB); //сложность - O(n)
+        HashSet<User> set = new HashSet<>(collB); //Благодаря такой коллекции можно избежат дубликатов. Сложность - O(n)
         return collA.stream()
                 .filter(set::contains) //O(n)
                 .collect(Collectors.toList());//O(n)
