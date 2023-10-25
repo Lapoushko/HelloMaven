@@ -38,13 +38,13 @@ public class WarAndPeace {
     //Сложность O(N)
     private static List<List<Map.Entry<String,Integer>>> CalculateWords(){
         WordParser wordParser = new WordParser(WAR_AND_PEACE_FILE_PATH);
-        Map<String,Integer> hashMap = new HashMap<>();
+        Map<String,Integer> hashMap = new HashMap<>(); //Структура данных для подсчёта слов по O(1) при чтении и записи
         wordParser.forEachWord(word ->{
             if (!hashMap.containsKey(word))
                 hashMap.put(word,1);
             else hashMap.put(word,hashMap.get(word) + 1);
         });
-        List<List<Map.Entry<String,Integer>>> answer = new ArrayList<>();
+        List<List<Map.Entry<String,Integer>>> answer = new ArrayList<>(); //Эта структура данных позволяет быстро обращаться к 10 элементам
         answer.add(CalculateTop10(hashMap,true));
         answer.add(CalculateTop10(hashMap,false));
         return answer;

@@ -28,6 +28,7 @@ import java.util.Map;
  * @since 19.10.2023
  */
 public class Task2 {
+    //Коллекция позволяет быстрый доступ по Ticket.id по сложности O(1)
     private Map<Long,Product> hashMap = new HashMap<>();
 
     //Список посетителей, не относится к задаче

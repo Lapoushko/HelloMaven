@@ -38,7 +38,7 @@ public class Task1 {
      */
     public static List<User> findDuplicates(Collection<User> collA, Collection<User> collB) {
         // TODO
-        HashSet<User> set = new HashSet<>(collB); //сложность - O(n)
+        HashSet<User> set = new HashSet<>(collB); //сложность - O(n). Хранит в себе уникальные значения. Доступ по ключу O(1)
         return collA.stream()
                 .filter(set::contains) //O(n)
                 .collect(Collectors.toList());//O(n)
